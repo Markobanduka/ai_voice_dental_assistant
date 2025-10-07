@@ -131,7 +131,7 @@ function HowItWorks() {
 
               <div className="flex flex-wrap gap-2 justify-center">
                 <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                  Verified Doctors
+                  Verified Trainers
                 </span>
                 <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
                   Follow-up Care

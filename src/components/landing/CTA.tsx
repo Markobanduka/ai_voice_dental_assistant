@@ -29,7 +29,7 @@ function CTA() {
               </h2>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Join 1,200+ patients who trust our AI for instant guidance and
+                Join 1,200+ clients who trust our AI for instant guidance and
                 personalized care.
               </p>
             </div>
