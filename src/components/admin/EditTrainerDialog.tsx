@@ -61,38 +61,26 @@ function EditTrainerDialog({
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Edit Doctor</DialogTitle>
+          <DialogTitle>Edit Trainer</DialogTitle>
           <DialogDescription>
-            Update doctor information and status.
+            Update trainer information and status.
           </DialogDescription>
         </DialogHeader>
 
         {editingTrainer && (
           <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  value={editingTrainer.name}
-                  onChange={(e) =>
-                    setEditingTrainer({
-                      ...editingTrainer,
-                      name: e.target.value,
-                    })
-                  }
-                />
-              </div>
-              {/* <div className="space-y-2">
-                <Label htmlFor="speciality">Speciality</Label>
-                <Input
-                  id="speciality"
-                  value={editingDoctor.speciality}
-                  onChange={(e) =>
-                    setEditingDoctor({ ...editingDoctor, speciality: e.target.value })
-                  }
-                />
-              </div> */}
+            <div className="space-y-2">
+              <Label htmlFor="name">Name</Label>
+              <Input
+                id="name"
+                value={editingTrainer.name}
+                onChange={(e) =>
+                  setEditingTrainer({
+                    ...editingTrainer,
+                    name: e.target.value,
+                  })
+                }
+              />
             </div>
 
             <div className="space-y-2">

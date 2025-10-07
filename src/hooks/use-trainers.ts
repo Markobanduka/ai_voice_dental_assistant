@@ -40,13 +40,13 @@ export function useUpdateTrainer() {
       queryClient.invalidateQueries({ queryKey: ["getTrainers"] });
       queryClient.invalidateQueries({ queryKey: ["getAvailableTrainers"] });
     },
-    onError: (error) => console.error("Failed to update doctor:", error),
+    onError: (error) => console.error("Failed to update trainer:", error),
   });
 }
 
-export function useAvailableDoctors() {
+export function useAvailableTrainers() {
   const result = useQuery({
-    queryKey: ["getAvailableDoctors"],
+    queryKey: ["getAvailableTrainers"],
     queryFn: getAvailableTrainers,
   });
 

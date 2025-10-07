@@ -119,7 +119,7 @@ function Hero() {
                     <p className="text-sm text-muted-foreground">
                       Trusted by{" "}
                       <span className="font-semibold text-foreground">
-                        1,200+ patients
+                        1,200+ clients
                       </span>
                     </p>
                   </div>
