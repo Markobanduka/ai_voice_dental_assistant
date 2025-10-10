@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import UserSync from "@/components/UserSync";
 
 import TanStackProvider from "@/components/providers/TanStackProvider";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DentWise",
-  description: "AI Voice Assistant for Dental advices.",
+  title: "Book Training",
+  description:
+    "Book your first workout with us and start your fitness journey today. Personalized training sessions designed to help you reach your goals.",
 };
 
 export default function RootLayout({
@@ -51,6 +46,7 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
           >
             <UserSync />
+            <Toaster />
             {children}
           </body>
         </html>
