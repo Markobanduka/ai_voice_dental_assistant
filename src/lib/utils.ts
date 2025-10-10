@@ -41,7 +41,7 @@ export const getNext5Days = () => {
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const date = new Date(tomorrow);
     date.setDate(date.getDate() + i);
     dates.push(date.toISOString().split("T")[0]);
@@ -52,6 +52,9 @@ export const getNext5Days = () => {
 
 export const getAvailableTimeSlots = () => {
   return [
+    "7:30",
+    "08:00",
+    "08:30",
     "09:00",
     "09:30",
     "10:00",
@@ -64,6 +67,15 @@ export const getAvailableTimeSlots = () => {
     "15:30",
     "16:00",
     "16:30",
+    "17:00",
+    "17:30",
+    "18:00",
+    "18:30",
+    "19:00",
+    "19:30",
+    "20:00",
+    "20:30",
+    "21:00",
   ];
 };
 
