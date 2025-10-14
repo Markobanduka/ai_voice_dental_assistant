@@ -4,6 +4,21 @@ import { Gender } from "@prisma/client";
 import { prisma } from "../prisma";
 import { generateAvatar } from "../utils";
 import { revalidatePath } from "next/cache";
+import { currentUser } from "@clerk/nextjs/server";
+
+export async function checkIfTrainer() {
+  const user = await currentUser();
+  if (!user) return null;
+
+  const email = user.emailAddresses[0]?.emailAddress;
+  if (!email) return null;
+
+  const trainer = await prisma.trainer.findUnique({
+    where: { email },
+  });
+
+  return !!trainer;
+}
 
 export async function geTrainers() {
   try {

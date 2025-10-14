@@ -5,8 +5,16 @@ import {
   getAvailableTrainers,
   geTrainers,
   updateTrainer,
+  checkIfTrainer,
 } from "@/lib/actions/trainers";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+
+export function useIsTrainer() {
+  return useQuery({
+    queryKey: ["isTrainer"],
+    queryFn: checkIfTrainer,
+  });
+}
 
 export function useGetTrainers() {
   const result = useQuery({
